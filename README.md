@@ -1,2 +1,4 @@
 # 690FINALPROJECT
-The repo for the 690 final project
+README for the 690 Final Project
+
+In this project we will be making a
