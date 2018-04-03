@@ -14,7 +14,7 @@ Nice to haves:
 Unlockable/Customizable character/obstacles/background
 different modes (low gravity, faster/slower obstacles)
 
-Total estimated hours required: HELLA hours
+Total estimated hours required: 30 hours
 
 Task Assignment:
 Everything done together(?)
