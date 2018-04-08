@@ -1,0 +1,577 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		ACCE09B3207972E80086DFB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCE09B2207972E80086DFB6 /* AppDelegate.swift */; };
+		ACCE09B5207972E80086DFB6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = ACCE09B4207972E80086DFB6 /* GameScene.sks */; };
+		ACCE09B7207972E80086DFB6 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = ACCE09B6207972E80086DFB6 /* Actions.sks */; };
+		ACCE09B9207972E80086DFB6 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCE09B8207972E80086DFB6 /* GameScene.swift */; };
+		ACCE09BB207972E80086DFB6 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCE09BA207972E80086DFB6 /* GameViewController.swift */; };
+		ACCE09BE207972E80086DFB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACCE09BC207972E80086DFB6 /* Main.storyboard */; };
+		ACCE09C0207972E80086DFB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ACCE09BF207972E80086DFB6 /* Assets.xcassets */; };
+		ACCE09C3207972E80086DFB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACCE09C1207972E80086DFB6 /* LaunchScreen.storyboard */; };
+		ACCE09CE207972E90086DFB6 /* Flappy_GatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCE09CD207972E90086DFB6 /* Flappy_GatorTests.swift */; };
+		ACCE09D9207972E90086DFB6 /* Flappy_GatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCE09D8207972E90086DFB6 /* Flappy_GatorUITests.swift */; };
+		ACCE09E7207989A70086DFB6 /* GameElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCE09E6207989A70086DFB6 /* GameElements.swift */; };
+		ACCE0A292079B0A30086DFB6 /* sky.png in Resources */ = {isa = PBXBuildFile; fileRef = ACCE0A282079B0A20086DFB6 /* sky.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		ACCE09CA207972E80086DFB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACCE09A7207972E80086DFB6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACCE09AE207972E80086DFB6;
+			remoteInfo = "Flappy Gator";
+		};
+		ACCE09D5207972E90086DFB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ACCE09A7207972E80086DFB6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ACCE09AE207972E80086DFB6;
+			remoteInfo = "Flappy Gator";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		ACCE09AF207972E80086DFB6 /* Flappy Gator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flappy Gator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACCE09B2207972E80086DFB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ACCE09B4207972E80086DFB6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		ACCE09B6207972E80086DFB6 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
+		ACCE09B8207972E80086DFB6 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		ACCE09BA207972E80086DFB6 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		ACCE09BD207972E80086DFB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ACCE09BF207972E80086DFB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ACCE09C2207972E80086DFB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ACCE09C4207972E80086DFB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACCE09C9207972E80086DFB6 /* Flappy GatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flappy GatorTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACCE09CD207972E90086DFB6 /* Flappy_GatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flappy_GatorTests.swift; sourceTree = "<group>"; };
+		ACCE09CF207972E90086DFB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACCE09D4207972E90086DFB6 /* Flappy GatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Flappy GatorUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACCE09D8207972E90086DFB6 /* Flappy_GatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flappy_GatorUITests.swift; sourceTree = "<group>"; };
+		ACCE09DA207972E90086DFB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACCE09E6207989A70086DFB6 /* GameElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameElements.swift; sourceTree = "<group>"; };
+		ACCE0A282079B0A20086DFB6 /* sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sky.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		ACCE09AC207972E80086DFB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACCE09C6207972E80086DFB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACCE09D1207972E90086DFB6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ACCE09A6207972E80086DFB6 = {
+			isa = PBXGroup;
+			children = (
+				ACCE09B1207972E80086DFB6 /* Flappy Gator */,
+				ACCE09CC207972E80086DFB6 /* Flappy GatorTests */,
+				ACCE09D7207972E90086DFB6 /* Flappy GatorUITests */,
+				ACCE09B0207972E80086DFB6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		ACCE09B0207972E80086DFB6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ACCE09AF207972E80086DFB6 /* Flappy Gator.app */,
+				ACCE09C9207972E80086DFB6 /* Flappy GatorTests.xctest */,
+				ACCE09D4207972E90086DFB6 /* Flappy GatorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ACCE09B1207972E80086DFB6 /* Flappy Gator */ = {
+			isa = PBXGroup;
+			children = (
+				ACCE09B2207972E80086DFB6 /* AppDelegate.swift */,
+				ACCE09B4207972E80086DFB6 /* GameScene.sks */,
+				ACCE09B6207972E80086DFB6 /* Actions.sks */,
+				ACCE09B8207972E80086DFB6 /* GameScene.swift */,
+				ACCE09BA207972E80086DFB6 /* GameViewController.swift */,
+				ACCE09E6207989A70086DFB6 /* GameElements.swift */,
+				ACCE09BC207972E80086DFB6 /* Main.storyboard */,
+				ACCE0A282079B0A20086DFB6 /* sky.png */,
+				ACCE09BF207972E80086DFB6 /* Assets.xcassets */,
+				ACCE09C1207972E80086DFB6 /* LaunchScreen.storyboard */,
+				ACCE09C4207972E80086DFB6 /* Info.plist */,
+			);
+			path = "Flappy Gator";
+			sourceTree = "<group>";
+		};
+		ACCE09CC207972E80086DFB6 /* Flappy GatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				ACCE09CD207972E90086DFB6 /* Flappy_GatorTests.swift */,
+				ACCE09CF207972E90086DFB6 /* Info.plist */,
+			);
+			path = "Flappy GatorTests";
+			sourceTree = "<group>";
+		};
+		ACCE09D7207972E90086DFB6 /* Flappy GatorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				ACCE09D8207972E90086DFB6 /* Flappy_GatorUITests.swift */,
+				ACCE09DA207972E90086DFB6 /* Info.plist */,
+			);
+			path = "Flappy GatorUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		ACCE09AE207972E80086DFB6 /* Flappy Gator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACCE09DD207972E90086DFB6 /* Build configuration list for PBXNativeTarget "Flappy Gator" */;
+			buildPhases = (
+				ACCE09AB207972E80086DFB6 /* Sources */,
+				ACCE09AC207972E80086DFB6 /* Frameworks */,
+				ACCE09AD207972E80086DFB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Flappy Gator";
+			productName = "Flappy Gator";
+			productReference = ACCE09AF207972E80086DFB6 /* Flappy Gator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		ACCE09C8207972E80086DFB6 /* Flappy GatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACCE09E0207972E90086DFB6 /* Build configuration list for PBXNativeTarget "Flappy GatorTests" */;
+			buildPhases = (
+				ACCE09C5207972E80086DFB6 /* Sources */,
+				ACCE09C6207972E80086DFB6 /* Frameworks */,
+				ACCE09C7207972E80086DFB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ACCE09CB207972E80086DFB6 /* PBXTargetDependency */,
+			);
+			name = "Flappy GatorTests";
+			productName = "Flappy GatorTests";
+			productReference = ACCE09C9207972E80086DFB6 /* Flappy GatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		ACCE09D3207972E90086DFB6 /* Flappy GatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ACCE09E3207972E90086DFB6 /* Build configuration list for PBXNativeTarget "Flappy GatorUITests" */;
+			buildPhases = (
+				ACCE09D0207972E90086DFB6 /* Sources */,
+				ACCE09D1207972E90086DFB6 /* Frameworks */,
+				ACCE09D2207972E90086DFB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ACCE09D6207972E90086DFB6 /* PBXTargetDependency */,
+			);
+			name = "Flappy GatorUITests";
+			productName = "Flappy GatorUITests";
+			productReference = ACCE09D4207972E90086DFB6 /* Flappy GatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		ACCE09A7207972E80086DFB6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = 690FinalProject;
+				TargetAttributes = {
+					ACCE09AE207972E80086DFB6 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					ACCE09C8207972E80086DFB6 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = ACCE09AE207972E80086DFB6;
+					};
+					ACCE09D3207972E90086DFB6 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = ACCE09AE207972E80086DFB6;
+					};
+				};
+			};
+			buildConfigurationList = ACCE09AA207972E80086DFB6 /* Build configuration list for PBXProject "Flappy Gator" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = ACCE09A6207972E80086DFB6;
+			productRefGroup = ACCE09B0207972E80086DFB6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				ACCE09AE207972E80086DFB6 /* Flappy Gator */,
+				ACCE09C8207972E80086DFB6 /* Flappy GatorTests */,
+				ACCE09D3207972E90086DFB6 /* Flappy GatorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		ACCE09AD207972E80086DFB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACCE09BE207972E80086DFB6 /* Main.storyboard in Resources */,
+				ACCE09B5207972E80086DFB6 /* GameScene.sks in Resources */,
+				ACCE09C0207972E80086DFB6 /* Assets.xcassets in Resources */,
+				ACCE0A292079B0A30086DFB6 /* sky.png in Resources */,
+				ACCE09C3207972E80086DFB6 /* LaunchScreen.storyboard in Resources */,
+				ACCE09B7207972E80086DFB6 /* Actions.sks in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACCE09C7207972E80086DFB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACCE09D2207972E90086DFB6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		ACCE09AB207972E80086DFB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACCE09E7207989A70086DFB6 /* GameElements.swift in Sources */,
+				ACCE09B9207972E80086DFB6 /* GameScene.swift in Sources */,
+				ACCE09BB207972E80086DFB6 /* GameViewController.swift in Sources */,
+				ACCE09B3207972E80086DFB6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACCE09C5207972E80086DFB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACCE09CE207972E90086DFB6 /* Flappy_GatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACCE09D0207972E90086DFB6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ACCE09D9207972E90086DFB6 /* Flappy_GatorUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		ACCE09CB207972E80086DFB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACCE09AE207972E80086DFB6 /* Flappy Gator */;
+			targetProxy = ACCE09CA207972E80086DFB6 /* PBXContainerItemProxy */;
+		};
+		ACCE09D6207972E90086DFB6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ACCE09AE207972E80086DFB6 /* Flappy Gator */;
+			targetProxy = ACCE09D5207972E90086DFB6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		ACCE09BC207972E80086DFB6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACCE09BD207972E80086DFB6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		ACCE09C1207972E80086DFB6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				ACCE09C2207972E80086DFB6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		ACCE09DB207972E90086DFB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		ACCE09DC207972E90086DFB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		ACCE09DE207972E90086DFB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Flappy Gator/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "PR690finalproject.Flappy-Gator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		ACCE09DF207972E90086DFB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Flappy Gator/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "PR690finalproject.Flappy-Gator";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		ACCE09E1207972E90086DFB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Flappy GatorTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "PR690finalproject.Flappy-GatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flappy Gator.app/Flappy Gator";
+			};
+			name = Debug;
+		};
+		ACCE09E2207972E90086DFB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Flappy GatorTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "PR690finalproject.Flappy-GatorTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Flappy Gator.app/Flappy Gator";
+			};
+			name = Release;
+		};
+		ACCE09E4207972E90086DFB6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Flappy GatorUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "PR690finalproject.Flappy-GatorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Flappy Gator";
+			};
+			name = Debug;
+		};
+		ACCE09E5207972E90086DFB6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Flappy GatorUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "PR690finalproject.Flappy-GatorUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Flappy Gator";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		ACCE09AA207972E80086DFB6 /* Build configuration list for PBXProject "Flappy Gator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACCE09DB207972E90086DFB6 /* Debug */,
+				ACCE09DC207972E90086DFB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACCE09DD207972E90086DFB6 /* Build configuration list for PBXNativeTarget "Flappy Gator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACCE09DE207972E90086DFB6 /* Debug */,
+				ACCE09DF207972E90086DFB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACCE09E0207972E90086DFB6 /* Build configuration list for PBXNativeTarget "Flappy GatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACCE09E1207972E90086DFB6 /* Debug */,
+				ACCE09E2207972E90086DFB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ACCE09E3207972E90086DFB6 /* Build configuration list for PBXNativeTarget "Flappy GatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACCE09E4207972E90086DFB6 /* Debug */,
+				ACCE09E5207972E90086DFB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = ACCE09A7207972E80086DFB6 /* Project object */;
+}
