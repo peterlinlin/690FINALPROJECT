@@ -22,13 +22,14 @@ class GameScene: SKScene , SKPhysicsContactDelegate{
     var logoImage = SKSpriteNode()
     var wallPair = SKNode()
     var moveAndRemove = SKAction()
-    /*
+    
+    
     //Create the gator atlas for animation
     let gatorAtlas = SKTextureAtlas(named:"player")
-    var gatorSprites = Array()
+    var gatorSprites = Array<Any>()
     var gator = SKSpriteNode()
     var repeatActionBird = SKAction()
-        */
+ 
     
     override func didMove(to view: SKView){
         createScene()
@@ -76,7 +77,7 @@ class GameScene: SKScene , SKPhysicsContactDelegate{
             background.size = (self.view?.bounds.size)!
             self.addChild(background)
         }
-    
+    gatorSprites.append(gatorAtlas.textureNamed("gator"))
     
     }
 }
