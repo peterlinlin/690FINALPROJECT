@@ -77,7 +77,12 @@ class GameScene: SKScene , SKPhysicsContactDelegate{
             background.size = (self.view?.bounds.size)!
             self.addChild(background)
         }
-    gatorSprites.append(gatorAtlas.textureNamed("gator"))
+    gatorSprites.append(gatorAtlas.textureNamed("gator"))                           //add sprites to the gator atlas
+    
+    self.gator = createGator()
+    self.addChild(gator)
+    
+    
     
     }
 }
