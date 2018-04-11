@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C2E289E207EA5600055CF23 /* player.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 4C2E289D207EA5600055CF23 /* player.atlas */; };
+		4C1F8710207EB65700289300 /* player.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 4C1F870F207EB65700289300 /* player.atlas */; };
 		ACCE09B3207972E80086DFB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCE09B2207972E80086DFB6 /* AppDelegate.swift */; };
 		ACCE09B5207972E80086DFB6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = ACCE09B4207972E80086DFB6 /* GameScene.sks */; };
 		ACCE09B7207972E80086DFB6 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = ACCE09B6207972E80086DFB6 /* Actions.sks */; };
@@ -19,7 +19,6 @@
 		ACCE09CE207972E90086DFB6 /* Flappy_GatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCE09CD207972E90086DFB6 /* Flappy_GatorTests.swift */; };
 		ACCE09D9207972E90086DFB6 /* Flappy_GatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCE09D8207972E90086DFB6 /* Flappy_GatorUITests.swift */; };
 		ACCE09E7207989A70086DFB6 /* GameElements.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACCE09E6207989A70086DFB6 /* GameElements.swift */; };
-		ACCE0A292079B0A30086DFB6 /* sky.png in Resources */ = {isa = PBXBuildFile; fileRef = ACCE0A282079B0A20086DFB6 /* sky.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +39,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4C2E289D207EA5600055CF23 /* player.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = player.atlas; path = ../../../Beetle/Beetle/player.atlas; sourceTree = "<group>"; };
+		4C1F870F207EB65700289300 /* player.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = player.atlas; path = "Flappy Gator/player.atlas"; sourceTree = "<group>"; };
 		ACCE09AF207972E80086DFB6 /* Flappy Gator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Flappy Gator.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACCE09B2207972E80086DFB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACCE09B4207972E80086DFB6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -58,7 +57,6 @@
 		ACCE09D8207972E90086DFB6 /* Flappy_GatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flappy_GatorUITests.swift; sourceTree = "<group>"; };
 		ACCE09DA207972E90086DFB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACCE09E6207989A70086DFB6 /* GameElements.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameElements.swift; sourceTree = "<group>"; };
-		ACCE0A282079B0A20086DFB6 /* sky.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sky.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +87,7 @@
 		ACCE09A6207972E80086DFB6 = {
 			isa = PBXGroup;
 			children = (
+				4C1F870F207EB65700289300 /* player.atlas */,
 				ACCE09B1207972E80086DFB6 /* Flappy Gator */,
 				ACCE09CC207972E80086DFB6 /* Flappy GatorTests */,
 				ACCE09D7207972E90086DFB6 /* Flappy GatorUITests */,
@@ -116,11 +115,9 @@
 				ACCE09BA207972E80086DFB6 /* GameViewController.swift */,
 				ACCE09E6207989A70086DFB6 /* GameElements.swift */,
 				ACCE09BC207972E80086DFB6 /* Main.storyboard */,
-				ACCE0A282079B0A20086DFB6 /* sky.png */,
 				ACCE09BF207972E80086DFB6 /* Assets.xcassets */,
 				ACCE09C4207972E80086DFB6 /* Info.plist */,
 				ACCE09B2207972E80086DFB6 /* AppDelegate.swift */,
-				4C2E289D207EA5600055CF23 /* player.atlas */,
 			);
 			path = "Flappy Gator";
 			sourceTree = "<group>";
@@ -250,11 +247,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C1F8710207EB65700289300 /* player.atlas in Resources */,
 				ACCE09BE207972E80086DFB6 /* Main.storyboard in Resources */,
 				ACCE09B5207972E80086DFB6 /* GameScene.sks in Resources */,
 				ACCE09C0207972E80086DFB6 /* Assets.xcassets in Resources */,
-				ACCE0A292079B0A30086DFB6 /* sky.png in Resources */,
-				4C2E289E207EA5600055CF23 /* player.atlas in Resources */,
 				ACCE09C3207972E80086DFB6 /* LaunchScreen.storyboard in Resources */,
 				ACCE09B7207972E80086DFB6 /* Actions.sks in Resources */,
 			);

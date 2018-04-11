@@ -2,7 +2,7 @@
 //  GameViewController.swift
 //  Flappy Gator
 //
-//  Created by Peter Lin on 4/7/18.
+//  Created by Peter Lin & Regine Manuel on 4/7/18.
 //  Copyright © 2018 690FinalProject. All rights reserved.
 //
 

@@ -16,7 +16,7 @@ class GameScene: SKScene , SKPhysicsContactDelegate{
     var score = Int(0)
     var scoreLabel = SKLabelNode()
     var highscoreLabel = SKLabelNode()
-    var taptoplayLabel = SKLabelNode()
+    var taptoplayLabel = SKSpriteNode()
     var restartButton = SKSpriteNode()
     var pauseButton = SKSpriteNode()
     var logoImage = SKSpriteNode()
@@ -46,10 +46,10 @@ class GameScene: SKScene , SKPhysicsContactDelegate{
             if isDied == false{
                 enumerateChildNodes(withName: "background", using: ({
                     (node, error) in
-                    let sky = node as! SKSpriteNode
-                    sky.position = CGPoint(x: sky.position.x - 2, y: sky.position.y)
-                    if sky.position.x <= -sky.size.width {
-                        sky.position = CGPoint(x:sky.position.x + sky.size.width * 2, y:sky.position.y)
+                    let background = node as! SKSpriteNode
+                    background.position = CGPoint(x: background.position.x - 2, y: background.position.y)
+                    if background.position.x <= -background.size.width {
+                        background.position = CGPoint(x:background.position.x + background.size.width * 2, y:background.position.y)
                     }
                 }))
             }
@@ -70,19 +70,28 @@ class GameScene: SKScene , SKPhysicsContactDelegate{
     
     
         for i in 0..<2{
-            let background = SKSpriteNode(imageNamed: "sky")
+            let background = SKSpriteNode(imageNamed: "background")
             background.anchorPoint = CGPoint.init(x: 0, y: 0)
             background.position = CGPoint(x:CGFloat(i) * self.frame.width, y: 0)
             background.name = "background"
             background.size = (self.view?.bounds.size)!
             self.addChild(background)
         }
-    gatorSprites.append(gatorAtlas.textureNamed("gator"))                           //add sprites to the gator atlas
+        gatorSprites.append(gatorAtlas.textureNamed("gator"))                           //add sprites to the gator atlas
     
-    self.gator = createGator()
-    self.addChild(gator)
+        self.gator = createGator()
+        self.addChild(gator)
     
-    
+        scoreLabel = createScoreLabel()
+        self.addChild(scoreLabel)
+        
+        highscoreLabel = createHighScoreLabel()
+        self.addChild(highscoreLabel)
+        
+        createLogo()
+        
+        createTapToPlayLabel()
+
     
     }
 }

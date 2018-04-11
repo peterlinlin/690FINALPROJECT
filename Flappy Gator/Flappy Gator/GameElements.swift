@@ -2,7 +2,7 @@
 //  GameElements.swift
 //  Flappy Gator
 //
-//  Created by Peter Lin on 4/7/18.
+//  Created by Peter Lin & Regine Manuel on 4/7/18.
 //  Copyright © 2018 690FinalProject. All rights reserved.
 //
 
@@ -21,8 +21,8 @@ extension GameScene {
         
         //create a sprite of the gator with height/width of 50. Make it start in centered position
         let gator = SKSpriteNode(texture: SKTextureAtlas(named:"player").textureNamed("gator"))
-        gator.size = CGSize(width: 50, height:50)
-        gator.position = CGPoint(x:self.frame.midX, y:self.frame.midY)
+        gator.size = CGSize(width: 60, height: 60)
+        gator.position = CGPoint(x: self.frame.midX, y: self.frame.midY + 100)
         
         //have the gator sprite have a physics body of a circle with radius of half its width
         gator.physicsBody = SKPhysicsBody(circleOfRadius: gator.size.width / 2)
@@ -41,4 +41,94 @@ extension GameScene {
         return gator
         
     }
+    
+    //create a restart button
+    func createRestartButton() {
+        restartButton = SKSpriteNode(imageNamed:"restartButton")
+        restartButton.size = CGSize(width:100, height:100)
+        restartButton.position = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2)
+        restartButton.zPosition = 6
+        restartButton.setScale(0)
+        self.addChild(restartButton)
+        restartButton.run(SKAction.scale(to :1.0, duration: 0.3))
+        
+    }
+    
+    func createPauseButton(){
+        pauseButton = SKSpriteNode(imageNamed: "pauseButton")
+        pauseButton.size = CGSize(width: 50, height: 50)
+        pauseButton.position = CGPoint(x: self.frame.width - 30, y: 30)
+        pauseButton.zPosition = 6
+        self.addChild(pauseButton)
+        
+    }
+    
+    func createScoreLabel() -> SKLabelNode {
+        let scoreLabel = SKLabelNode()
+        scoreLabel.position = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2 + self.frame.height / 2.6)
+        
+        scoreLabel.text = "\(score)"
+        scoreLabel.zPosition = 5
+        scoreLabel.fontSize = 50
+        scoreLabel.fontColor = UIColor(red: CGFloat(0/255), green: CGFloat(0/255), blue: CGFloat(0/255), alpha: CGFloat(1))
+        scoreLabel.fontName = "HelveticaNeue-Bold"
+        
+        /*let scoreBackground = SKShapeNode()
+        scoreBackground.position = CGPoint(x: 0, y: 0)
+        
+        scoreBackground.path = CGPath(roundedRect: CGRect(x: CGFloat(-50), y: CGFloat(-30), width: CGFloat(100), height: CGFloat(100)), cornerWidth: 50, cornerHeight: 50, transform: nil)
+        
+        let scoreBackgroundColor = UIColor(red: CGFloat(0/255), green: CGFloat(0/255), blue: CGFloat(0/255), alpha: CGFloat(0.2))
+        
+        scoreBackground.strokeColor = UIColor.clear
+        scoreBackground.fillColor = scoreBackgroundColor
+        scoreBackground.zPosition = -1
+        scoreLabel.addChild(scoreBackground)
+        */
+        return scoreLabel
+        
+    }
+    
+    func createHighScoreLabel() ->SKLabelNode {
+        let highScoreLabel = SKLabelNode()
+        highScoreLabel.position = CGPoint(x: self.frame.width - 80, y: self.frame.height - 22)
+        
+        if let highestScore = UserDefaults.standard.object(forKey: "highestScore"){
+            highscoreLabel.text = "Highest Score: \(highestScore)"
+        }
+        else {
+            highScoreLabel.text = "Highest Score: 0"
+        }
+        
+        highScoreLabel.zPosition = 5
+        highScoreLabel.fontSize = 15
+        highScoreLabel.fontName = "Helvetica-Bold"
+        
+        return highScoreLabel
+            
+    }
+    
+    
+    func createLogo() {
+        logoImage = SKSpriteNode()
+        logoImage = SKSpriteNode(imageNamed: "logo")
+        logoImage.size = CGSize(width: 340, height: 81.25)
+        logoImage.position = CGPoint(x: self.frame.midX, y:self.frame.midY + 200)
+        self.addChild(logoImage)
+        logoImage.run(SKAction.scale(to:1.0, duration: 3.0))
+        
+    }
+    
+    //create the play button and position it
+    func createTapToPlayLabel() {
+        taptoplayLabel = SKSpriteNode()
+        taptoplayLabel = SKSpriteNode(imageNamed: "playButton")
+        taptoplayLabel.size = CGSize(width: 75, height: 75)
+        taptoplayLabel.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+        taptoplayLabel.setScale(2)
+        self.addChild(taptoplayLabel)
+        
+        
+    }
+    
 }
