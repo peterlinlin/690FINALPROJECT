@@ -121,14 +121,63 @@ extension GameScene {
     
     //create the play button and position it
     func createTapToPlayLabel() {
-        taptoplayLabel = SKSpriteNode()
-        taptoplayLabel = SKSpriteNode(imageNamed: "playButton")
-        taptoplayLabel.size = CGSize(width: 75, height: 75)
-        taptoplayLabel.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
-        taptoplayLabel.setScale(2)
-        self.addChild(taptoplayLabel)
-        
+        tapToPlayLabel = SKSpriteNode()
+        tapToPlayLabel = SKSpriteNode(imageNamed: "playButton")
+        tapToPlayLabel.size = CGSize(width: 75, height: 75)
+        tapToPlayLabel.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
+        tapToPlayLabel.setScale(2)
+        self.addChild(tapToPlayLabel)
         
     }
+    
+    func createPipes() -> SKNode {
+        pipePair = SKNode()
+        pipePair.name = "pipePair"
+        
+        let topPipe = SKSpriteNode(imageNamed: "pipeDown")
+        let bottomPipe = SKSpriteNode(imageNamed: "pipeUp")
+        
+        topPipe.position = CGPoint(x: self.frame.width + 25, y: self.frame.height / 2 + 300)
+        bottomPipe.position = CGPoint(x: self.frame.width + 25, y:self.frame.height / 2 - 300)
+        
+        topPipe.setScale(7)
+        bottomPipe.setScale(7)
+        
+        topPipe.physicsBody = SKPhysicsBody(rectangleOf: topPipe.size)
+        topPipe.physicsBody?.categoryBitMask = CollisionBitMask.pipeCategory
+        topPipe.physicsBody?.collisionBitMask = CollisionBitMask.gatorCategory
+        topPipe.physicsBody?.collisionBitMask = CollisionBitMask.gatorCategory
+        topPipe.physicsBody?.isDynamic = false
+        topPipe.physicsBody?.affectedByGravity = false
+        
+        bottomPipe.physicsBody = SKPhysicsBody(rectangleOf: bottomPipe.size)
+        bottomPipe.physicsBody?.categoryBitMask = CollisionBitMask.pipeCategory
+        bottomPipe.physicsBody?.collisionBitMask = CollisionBitMask.gatorCategory
+        bottomPipe.physicsBody?.collisionBitMask = CollisionBitMask.gatorCategory
+        bottomPipe.physicsBody?.isDynamic = false
+        bottomPipe.physicsBody?.affectedByGravity = false
+        
+        pipePair.addChild(topPipe)
+        pipePair.addChild(bottomPipe)
+        
+        pipePair.zPosition = 1
+        
+        let randomPosition = random(min: -200, max: 200)
+        pipePair.position.y = pipePair.position.y + randomPosition
+        pipePair.run(moveAndRemove)
+        
+        return pipePair
+        
+    }
+    
+    func random() -> CGFloat{
+        return CGFloat(Float(arc4random()) / 0xFFFFFFFF)
+        
+    }
+    
+    func random(min: CGFloat, max: CGFloat) -> CGFloat{
+        return random() * (max - min) + min
+        
+        }
     
 }

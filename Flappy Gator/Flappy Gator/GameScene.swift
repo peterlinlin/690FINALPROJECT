@@ -16,11 +16,11 @@ class GameScene: SKScene , SKPhysicsContactDelegate{
     var score = Int(0)
     var scoreLabel = SKLabelNode()
     var highscoreLabel = SKLabelNode()
-    var taptoplayLabel = SKSpriteNode()
+    var tapToPlayLabel = SKSpriteNode()
     var restartButton = SKSpriteNode()
     var pauseButton = SKSpriteNode()
     var logoImage = SKSpriteNode()
-    var wallPair = SKNode()
+    var pipePair = SKNode()
     var moveAndRemove = SKAction()
     
     
@@ -28,7 +28,7 @@ class GameScene: SKScene , SKPhysicsContactDelegate{
     let gatorAtlas = SKTextureAtlas(named:"player")
     var gatorSprites = Array<Any>()
     var gator = SKSpriteNode()
-    var repeatActionBird = SKAction()
+    var repeatActionGator = SKAction()
  
     
     override func didMove(to view: SKView){
@@ -36,7 +36,45 @@ class GameScene: SKScene , SKPhysicsContactDelegate{
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        
+        if isGameStarted == false {
+            isGameStarted = true
+            gator.physicsBody?.affectedByGravity = true
+           
+            
+            logoImage.run(SKAction.scale(to: 0.5, duration: 0.3), completion: {
+                self.logoImage.removeFromParent()
+            })
+            
+            tapToPlayLabel.removeFromParent()
+            
+            self.gator.run(repeatActionGator)
+            
+            let spawn = SKAction.run({
+                () in
+                self.pipePair = self.createPipes()
+                self.addChild(self.pipePair)
+            })
+            
+            let delay = SKAction.wait(forDuration: 1.5)
+            let spawnDelay = SKAction.sequence([spawn, delay])
+            let spawnDelayForever = SKAction.repeatForever(spawnDelay)
+            self.run(spawnDelayForever)
+            
+            let distance = CGFloat(self.frame.width + pipePair.frame.width)
+            let movePipes = SKAction.moveBy(x: -distance - 50, y: 0, duration: TimeInterval(0.008 * distance))
+            let removePipes = SKAction.removeFromParent()
+            moveAndRemove = SKAction.sequence([movePipes, removePipes])
+            
+            gator.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
+            gator.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 75))
+            
+        }
+        else{
+            if isDied == false {
+                gator.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
+                gator.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 75))
+            }
+        }
     }
     
     
@@ -79,19 +117,15 @@ class GameScene: SKScene , SKPhysicsContactDelegate{
         }
         gatorSprites.append(gatorAtlas.textureNamed("gator"))                           //add sprites to the gator atlas
     
+        //initialize everything
         self.gator = createGator()
         self.addChild(gator)
-    
         scoreLabel = createScoreLabel()
         self.addChild(scoreLabel)
-        
         highscoreLabel = createHighScoreLabel()
         self.addChild(highscoreLabel)
-        
         createLogo()
-        
         createTapToPlayLabel()
-
     
     }
 }
