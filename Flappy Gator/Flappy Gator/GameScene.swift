@@ -40,7 +40,7 @@ class GameScene: SKScene , SKPhysicsContactDelegate{
             isGameStarted = true
             gator.physicsBody?.affectedByGravity = true
            
-            
+            //remove logo and play button when the game starts
             logoImage.run(SKAction.scale(to: 0.5, duration: 0.3), completion: {
                 self.logoImage.removeFromParent()
             })
@@ -49,17 +49,20 @@ class GameScene: SKScene , SKPhysicsContactDelegate{
             
             self.gator.run(repeatActionGator)
             
+            //create pipes
             let spawn = SKAction.run({
                 () in
                 self.pipePair = self.createPipes()
                 self.addChild(self.pipePair)
             })
             
+            //delay when the pipes start appearing
             let delay = SKAction.wait(forDuration: 1.5)
             let spawnDelay = SKAction.sequence([spawn, delay])
             let spawnDelayForever = SKAction.repeatForever(spawnDelay)
             self.run(spawnDelayForever)
             
+            //distance between pipes and how fast they go
             let distance = CGFloat(self.frame.width + pipePair.frame.width)
             let movePipes = SKAction.moveBy(x: -distance - 50, y: 0, duration: TimeInterval(0.008 * distance))
             let removePipes = SKAction.removeFromParent()
@@ -73,6 +76,27 @@ class GameScene: SKScene , SKPhysicsContactDelegate{
             if isDied == false {
                 gator.physicsBody?.velocity = CGVector(dx: 0, dy: 0)
                 gator.physicsBody?.applyImpulse(CGVector(dx: 0, dy: 75))
+            }
+        }
+        
+        for touch in touches{
+            let location = touch.location(in: self)
+            if isDied == true{
+                if restartButton.contains(location){
+                    if UserDefaults.standard.object(forKey: "highestScore") != nil {
+                        let hscore = UserDefaults.standard.integer(forKey: "highestScore")
+                        
+                        if hscore < Int(scoreLabel.text!)!{
+                            UserDefaults.standard.set(scoreLabel.text, forKey: "highestScore")
+                        }
+                    }
+                        
+                    else {
+                        UserDefaults.standard.set(0, forKey: "highestScore")
+                    }
+                    restartScene()
+                    
+                }
             }
         }
     }
@@ -128,4 +152,47 @@ class GameScene: SKScene , SKPhysicsContactDelegate{
         createTapToPlayLabel()
     
     }
+    
+    //when game begins, detect collisions
+    func didBegin(_ contact: SKPhysicsContact) {
+        let firstBody = contact.bodyA
+        let secondBody = contact.bodyB
+        
+        //if the gator hits the ground or pipe he dies
+        if firstBody.categoryBitMask == CollisionBitMask.gatorCategory &&
+           secondBody.categoryBitMask == CollisionBitMask.pipeCategory ||
+           firstBody.categoryBitMask == CollisionBitMask.pipeCategory &&
+           secondBody.categoryBitMask == CollisionBitMask.gatorCategory ||
+           firstBody.categoryBitMask == CollisionBitMask.gatorCategory &&
+           secondBody.categoryBitMask == CollisionBitMask.groundCategory ||
+           firstBody.categoryBitMask == CollisionBitMask.groundCategory &&
+           secondBody.categoryBitMask == CollisionBitMask.gatorCategory {
+            
+            enumerateChildNodes(withName: "pipePair", using: ({(node, error) in
+                node.speed = 0
+                self.removeAllActions()
+            }))
+            
+            //when he dies remove all action and show restart button
+            if isDied == false{
+                isDied = true
+                createRestartButton()
+                self.gator.removeAllActions()
+            }
+            
+        }
+        //maybe a way to add score?
+    }
+    
+    //restart the game and set everything to default
+    func restartScene(){
+        self.removeAllChildren()
+        self.removeAllActions()
+        isDied = false
+        isGameStarted = false
+        score = 0
+        createScene()
+        
+    }
+    
 }

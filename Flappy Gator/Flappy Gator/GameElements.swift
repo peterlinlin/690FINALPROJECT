@@ -54,6 +54,7 @@ extension GameScene {
         
     }
     
+    //create pause button. maybe no need?
     func createPauseButton(){
         pauseButton = SKSpriteNode(imageNamed: "pauseButton")
         pauseButton.size = CGSize(width: 50, height: 50)
@@ -63,6 +64,7 @@ extension GameScene {
         
     }
     
+    //create a label to keep track of the score
     func createScoreLabel() -> SKLabelNode {
         let scoreLabel = SKLabelNode()
         scoreLabel.position = CGPoint(x: self.frame.width / 2, y: self.frame.height / 2 + self.frame.height / 2.6)
@@ -89,6 +91,7 @@ extension GameScene {
         
     }
     
+    //create highschore label
     func createHighScoreLabel() ->SKLabelNode {
         let highScoreLabel = SKLabelNode()
         highScoreLabel.position = CGPoint(x: self.frame.width - 80, y: self.frame.height - 22)
@@ -108,7 +111,7 @@ extension GameScene {
             
     }
     
-    
+    //create logo
     func createLogo() {
         logoImage = SKSpriteNode()
         logoImage = SKSpriteNode(imageNamed: "logo")
@@ -143,17 +146,18 @@ extension GameScene {
         topPipe.setScale(7)
         bottomPipe.setScale(7)
         
+        //assigne the top/bottom pipe with physics and collision detection
         topPipe.physicsBody = SKPhysicsBody(rectangleOf: topPipe.size)
         topPipe.physicsBody?.categoryBitMask = CollisionBitMask.pipeCategory
         topPipe.physicsBody?.collisionBitMask = CollisionBitMask.gatorCategory
-        topPipe.physicsBody?.collisionBitMask = CollisionBitMask.gatorCategory
+        topPipe.physicsBody?.contactTestBitMask = CollisionBitMask.gatorCategory
         topPipe.physicsBody?.isDynamic = false
         topPipe.physicsBody?.affectedByGravity = false
         
         bottomPipe.physicsBody = SKPhysicsBody(rectangleOf: bottomPipe.size)
         bottomPipe.physicsBody?.categoryBitMask = CollisionBitMask.pipeCategory
         bottomPipe.physicsBody?.collisionBitMask = CollisionBitMask.gatorCategory
-        bottomPipe.physicsBody?.collisionBitMask = CollisionBitMask.gatorCategory
+        bottomPipe.physicsBody?.contactTestBitMask = CollisionBitMask.gatorCategory
         bottomPipe.physicsBody?.isDynamic = false
         bottomPipe.physicsBody?.affectedByGravity = false
         
@@ -162,6 +166,7 @@ extension GameScene {
         
         pipePair.zPosition = 1
         
+        //re-adjust the pipe pairs so they are "random"
         let randomPosition = random(min: -200, max: 200)
         pipePair.position.y = pipePair.position.y + randomPosition
         pipePair.run(moveAndRemove)
