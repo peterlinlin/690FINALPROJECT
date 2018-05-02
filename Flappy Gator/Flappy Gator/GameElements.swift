@@ -54,7 +54,7 @@ extension GameScene {
         
     }
     
-    //create pause button. maybe no need?
+    /*//create pause button. maybe no need?
     func createPauseButton(){
         pauseButton = SKSpriteNode(imageNamed: "pauseButton")
         pauseButton.size = CGSize(width: 50, height: 50)
@@ -62,7 +62,7 @@ extension GameScene {
         pauseButton.zPosition = 6
         self.addChild(pauseButton)
         
-    }
+    }*/
     
     //create a label to keep track of the score
     func createScoreLabel() -> SKLabelNode {
@@ -115,7 +115,7 @@ extension GameScene {
     func createLogo() {
         logoImage = SKSpriteNode()
         logoImage = SKSpriteNode(imageNamed: "logo")
-        logoImage.size = CGSize(width: 340, height: 81.25)
+        logoImage.size = CGSize(width: 300, height: 81.25)
         logoImage.position = CGPoint(x: self.frame.midX, y:self.frame.midY + 200)
         self.addChild(logoImage)
         logoImage.run(SKAction.scale(to:1.0, duration: 3.0))
@@ -128,7 +128,7 @@ extension GameScene {
         tapToPlayLabel = SKSpriteNode(imageNamed: "playButton")
         tapToPlayLabel.size = CGSize(width: 75, height: 75)
         tapToPlayLabel.position = CGPoint(x: self.frame.midX, y: self.frame.midY)
-        tapToPlayLabel.setScale(2)
+        tapToPlayLabel.setScale(1.5)
         self.addChild(tapToPlayLabel)
         
     }
@@ -140,11 +140,11 @@ extension GameScene {
         let topPipe = SKSpriteNode(imageNamed: "pipeDown")
         let bottomPipe = SKSpriteNode(imageNamed: "pipeUp")
         
-        topPipe.position = CGPoint(x: self.frame.width + 25, y: self.frame.height / 2 + 300)
-        bottomPipe.position = CGPoint(x: self.frame.width + 25, y:self.frame.height / 2 - 300)
+        topPipe.position = CGPoint(x: self.frame.width + 30, y: self.frame.height / 2 + 420)
+        bottomPipe.position = CGPoint(x: self.frame.width + 30, y:self.frame.height / 2 - 420)
         
-        topPipe.setScale(7)
-        bottomPipe.setScale(7)
+        topPipe.setScale(0.5)
+        bottomPipe.setScale(0.5)
         
         //assigne the top/bottom pipe with physics and collision detection
         topPipe.physicsBody = SKPhysicsBody(rectangleOf: topPipe.size)
