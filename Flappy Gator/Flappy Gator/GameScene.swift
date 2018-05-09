@@ -67,7 +67,7 @@ class GameScene: SKScene , SKPhysicsContactDelegate{
             
             //distance between pipes and how fast they go
             let distance = CGFloat(self.frame.width + pipePair.frame.width)
-            let movePipes = SKAction.moveBy(x: -distance - 50, y: 0, duration: TimeInterval(0.008 * distance))
+            let movePipes = SKAction.moveBy(x: -distance - 80, y: 0, duration: TimeInterval(0.008 * distance))
             let removePipes = SKAction.removeFromParent()
             moveAndRemove = SKAction.sequence([movePipes, removePipes])
             

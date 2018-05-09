@@ -136,9 +136,9 @@ extension GameScene {
         let bottomPipe = SKSpriteNode(imageNamed: "pipeUp")
         let scoreCounter = SKSpriteNode(imageNamed: "count")
         
-        topPipe.position = CGPoint(x: self.frame.width + 30, y: self.frame.height / 2 + 420)
-        bottomPipe.position = CGPoint(x: self.frame.width + 30, y:self.frame.height / 2 - 420)
-        scoreCounter.position = CGPoint(x: self.frame.width + 120, y:self.frame.height / 2)
+        topPipe.position = CGPoint(x: self.frame.width + 60, y: self.frame.height / 2 + 420)
+        bottomPipe.position = CGPoint(x: self.frame.width + 60, y:self.frame.height / 2 - 420)
+        scoreCounter.position = CGPoint(x: self.frame.width + 150, y:self.frame.height / 2)
         
         topPipe.setScale(0.5)
         bottomPipe.setScale(0.5)
