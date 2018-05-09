@@ -21,7 +21,9 @@ class GameScene: SKScene , SKPhysicsContactDelegate{
     var pauseButton = SKSpriteNode()
     var logoImage = SKSpriteNode()
     var pipePair = SKNode()
+    var scoreCounter = SKNode()
     var moveAndRemove = SKAction()
+    var gameOverImage = SKSpriteNode()
     
     
     //Create the gator atlas for animation
@@ -54,6 +56,7 @@ class GameScene: SKScene , SKPhysicsContactDelegate{
                 () in
                 self.pipePair = self.createPipes()
                 self.addChild(self.pipePair)
+                //self.addChild(self.scoreCounter)
             })
             
             //delay when the pipes start appearing
@@ -178,10 +181,24 @@ class GameScene: SKScene , SKPhysicsContactDelegate{
                 isDied = true
                 createRestartButton()
                 self.gator.removeAllActions()
+                createGameOver()
             }
-            
+            highscoreLabel = createHighScoreLabel()
+            self.addChild(highscoreLabel)
+        
         }
-        //maybe a way to add score?
+        // score count
+        
+        else if firstBody.categoryBitMask == CollisionBitMask.gatorCategory && secondBody.categoryBitMask == CollisionBitMask.scoreCategory {
+            score += 1
+            scoreLabel.text = "\(score)"
+            secondBody.node?.removeFromParent()
+        }
+        else if firstBody.categoryBitMask == CollisionBitMask.scoreCategory && secondBody.categoryBitMask == CollisionBitMask.gatorCategory {
+            score += 1
+            scoreLabel.text = "\(score)"
+            firstBody.node?.removeFromParent()
+        }
     }
     
     //restart the game and set everything to default
@@ -191,6 +208,7 @@ class GameScene: SKScene , SKPhysicsContactDelegate{
         isDied = false
         isGameStarted = false
         score = 0
+        
         createScene()
         
     }
